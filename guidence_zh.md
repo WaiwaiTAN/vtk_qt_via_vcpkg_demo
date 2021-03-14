@@ -40,8 +40,7 @@ vcpkg integrate install
 ## 集成到Visual Studio中并使用qmake
 为Visual Studio安装插件[Qt Visual Studio Tools](https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools-19123)，并在Qt VS Tools -> Qt Versions中新建Qt version（\<add new Qt version\>），选择路径（Path）为`($vcpkgDir)\installed\($platformTar)\tools\qt5`。这里`$platformTar`指的是所安装库的目标平台。
 
-需要注意的是，编译生成解决方案的时候需要使用VS中的Release配置，因为这里我们没有安装Debug配置所需要的依赖库[^ftnt1]。
-[^ftnt1]: [stephane et al.](https://stackoverflow.com/questions/36686316/cannot-find-c-users-qt-work-install-lib-qt5widgetsd-lib-when-compiling-qtwebeng) Cannot find c:\Users\qt\work\install\lib\Qt5Widgetsd.lib when compiling QtWebEngine examples
+需要注意的是，编译生成解决方案的时候需要使用VS中的Release配置，因为这里我们没有安装Debug配置所需要的依赖库<sup id="a1">[1](#f1)</sup>。
 
 ## Demo运行
 VTK官网上给了一些使用VTK和Qt的例子，现来运行例子：[SideBySideRenderWindowsQt](https://vtk.org/Wiki/VTK/Examples/Cxx/Qt/SideBySideRenderWindowsQt)。
@@ -52,3 +51,4 @@ VTK官网上给了一些使用VTK和Qt的例子，现来运行例子：[SideBySi
 本Demo已经上传到Github，详请参阅：https://github.com/WaiwaiTAN/vtk_qt_via_vcpkg_demo
 
 ## 参考资料
+<b id="f1">1</b> [stephane et al.](https://stackoverflow.com/questions/36686316/cannot-find-c-users-qt-work-install-lib-qt5widgetsd-lib-when-compiling-qtwebeng) Cannot find c:\Users\qt\work\install\lib\Qt5Widgetsd.lib when compiling QtWebEngine examples[↩](#a1)
